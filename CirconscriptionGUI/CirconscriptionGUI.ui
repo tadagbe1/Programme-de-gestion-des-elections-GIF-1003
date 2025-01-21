@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CirconscriptionGUI</class>
+ <widget class="QMainWindow" name="CirconscriptionGUI">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>973</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>CirconscriptionGUI</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTextEdit" name="affichage">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>24</y>
+      <width>741</width>
+      <height>391</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>973</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuMenu">
+    <property name="title">
+     <string>Opérations</string>
+    </property>
+    <widget class="QMenu" name="menuInscription_d_une_personne">
+     <property name="title">
+      <string>Inscription d’une personne</string>
+     </property>
+     <addaction name="actionCandidate"/>
+     <addaction name="actionElecteur"/>
+    </widget>
+    <addaction name="menuInscription_d_une_personne"/>
+    <addaction name="actionD_sinscription_d_une_personne"/>
+    <addaction name="actionQuitter"/>
+   </widget>
+   <addaction name="menuMenu"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionCandidate">
+   <property name="text">
+    <string>Candidate</string>
+   </property>
+  </action>
+  <action name="actionElecteur">
+   <property name="text">
+    <string>Electeur</string>
+   </property>
+  </action>
+  <action name="actionD_sinscription_d_une_personne">
+   <property name="text">
+    <string>Désinscription d'une personne</string>
+   </property>
+  </action>
+  <action name="actionQuitter">
+   <property name="text">
+    <string>Quitter</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>actionQuitter</sender>
+   <signal>triggered()</signal>
+   <receiver>CirconscriptionGUI</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionCandidate</sender>
+   <signal>triggered()</signal>
+   <receiver>CirconscriptionGUI</receiver>
+   <slot>dialogCandidate()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionElecteur</sender>
+   <signal>triggered()</signal>
+   <receiver>CirconscriptionGUI</receiver>
+   <slot>dialogElecteur()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionD_sinscription_d_une_personne</sender>
+   <signal>triggered()</signal>
+   <receiver>CirconscriptionGUI</receiver>
+   <slot>dialogDesinscrire()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>dialogElecteur()</slot>
+  <slot>dialogCandidate()</slot>
+  <slot>dialogDesinscrire()</slot>
+ </slots>
+</ui>
